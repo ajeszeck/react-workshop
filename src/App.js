@@ -17,7 +17,6 @@ class App extends Component {
     this.setState({
       content: event.target.id
     })
-
   }
 
   render() {
