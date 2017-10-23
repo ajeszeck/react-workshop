@@ -1,43 +1,40 @@
 import React, { Component } from 'react';
+import ProfileCard from './profile_card'
+import Content from './content'
+import Navbar from './navbar'
 
-import './App.css';
-import Navbar from './containers/Navbar'
-import ProfileCard from './components/ProfileCard'
-import Content from './components/Content'
+var description = 'A just-outside-of-the-city boy with a penchant for shorts and Ruby.'
+var username = 'Ian Peter Greenburg'
 
-class App extends Component {
-  constructor() {
+class Page extends Component {
+  constructor(){
     super()
     this.state = {
-      content: 'home'
+      content: 'home',
     }
   }
-
   go(event){
     this.setState({
       content: event.target.id
     })
-
   }
-
   render() {
     return (
-      <div className="App">
-        <Navbar onClick= {(event) => this.go(event)} />
       <div className='page'>
+        <Navbar
+          onClick={(event) => this.go(event)}
+        />
         <div className='container-fluid top-padding'>
           <div className='col-md-2'>
-            <ProfileCard />
+            <ProfileCard username={username} description={description}/>
           </div>
           <div className='col-md-8'>
             <Content content={this.state.content}/>
           </div>
         </div>
       </div>
-
-      </div>
     );
   }
 }
 
-export default App;
+export default Page;
