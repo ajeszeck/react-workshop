@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import logo from '../logo.svg';
+import logo from '../../images/Ghost-icon.png';
 
 class Navbar extends Component {
   render(){
@@ -9,12 +9,12 @@ class Navbar extends Component {
           <div className='container'>
             <ul className='list-inline nav-left nav-list'>
               <li onClick={this.props.onClick} id='home'>Home</li>
-              <li onClick={this.props.onClick} id='about'>About</li>
-              <li onClick={this.props.onClick} id='contact'>Contact</li>
+              <li onClick={this.props.onClick} id='ctfg'>CTFG</li>
+              <li onClick={this.props.onClick} id='nhn'>NHN</li>
             </ul>
             <div className='brand'>
               <img src={logo} className="App-logo" alt="logo" />
-              <h4>React Workshop Profile Page</h4>
+              <h4>Ghosts are People, Too</h4>
             </div>
           </div>
         </div>

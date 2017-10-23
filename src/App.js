@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './containers/Navbar'
 import ProfileCard from './components/ProfileCard'
@@ -7,6 +7,10 @@ import Content from './components/Content'
 
 class App extends Component {
   render() {
+    const onClick = (e) => {
+      debugger
+      return e.target.id
+    }
     return (
       <div className="App">
 
