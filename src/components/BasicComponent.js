@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import MyFirstComponent from './MyFirstComponent'
+
 class BasicComponent extends Component {
   render(){
     return(<div>
